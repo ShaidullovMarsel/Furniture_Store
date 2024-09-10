@@ -1,0 +1,208 @@
+@import '../../mixins.scss';
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    opacity: 0.9;
+    width: 224px;
+    top: 0;
+    left: -100%;
+
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__wrapper{
+        text-align: center;
+        min-height: 100vh;
+        width: 224px;
+        background: rgb(234, 231, 231);
+    }
+    &__logo {
+        padding-top: 31px;
+        color: rgb(65, 122, 130);
+        font-family: "PT Sans", sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 52px;
+        letter-spacing: 0%;
+    }
+    &__city {
+        margin-top: 14px;
+        color: rgb(65, 122, 130);
+        font-family: "PT Sans", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 13px;
+        letter-spacing: 0%;
+    }
+    &__phone {
+        margin-top: 4px;
+        font-family: "PT Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        a {
+            color: rgb(65, 122, 130);
+            text-decoration: none;
+        }
+    }
+   .menu_blids-item {
+        width: 25px;
+        text-align: center;
+   }
+    &__blinds {
+        cursor: pointer;
+        display: flex;
+        margin-top: 24px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__rolls {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__mosquito {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__plisse {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__electrician {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__external {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__photoprinting {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__vector {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__stock {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            @include menuitem
+        }
+    }
+    &__calculator {
+        cursor: pointer;
+        display: flex;
+        margin-top: 16px;
+        margin-left: 26px;
+        &-text {
+            margin-left: 16px;
+            color: rgb(184, 76, 116);
+            font-family: PT Sans;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+            margin-top: 3px;
+        }
+    }
+    &__search {
+        display: flex;
+        margin-top: 54px;
+        margin-left: 26px;
+        &-input {
+            .input {
+                border-radius: 25px;
+                width: 126px;
+                height: 32px;
+                border: 1px solid rgb(65, 122, 130);
+                background: url("../../../public/icons/search.svg") no-repeat 9px 7px;
+            }
+            ::placeholder {
+                padding: 0 0px;
+                color: rgb(65, 122, 130);
+                font-family: PT Sans;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0%;
+            }
+            .input[type=text]{
+                padding-left: 45px;
+            }
+        }
+        &-text {
+            @include menuitem
+        }
+    }
+    &__list {
+        margin-left: 26px;
+        margin-top: 32px;
+        text-align: left;
+        list-style-type: none;
+        .menu__link {
+            a {
+                text-decoration: none;
+                color: rgb(65, 122, 130);
+                font-family: PT Sans;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 30px;
+                letter-spacing: 0%;
+                margin-bottom: 8px;
+            } 
+        }
+    }
+    
+    
+}

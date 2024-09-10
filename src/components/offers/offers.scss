@@ -1,0 +1,201 @@
+@import '../../mixins.scss';
+
+
+.offers {
+    margin-bottom: 130px;
+    &__descr {
+        padding-top: 136px;
+        display: flex;
+        width: 1120px;
+        justify-content: space-between;
+        &-text {
+            color: rgb(5, 46, 76);
+            font-family: PT Sans;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0%;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        &-slide {
+            display: flex;
+            color: rgb(5, 46, 76);
+            font-family: PT Sans;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-right: 3px;
+            margin-left: 3px;
+            @include slider
+        }
+    }
+    &__items {
+        margin-top: 22px;
+        
+        &-wrapper {
+            .offers__items-wrapp:hover {
+                background-color: rgb(227, 246, 245);
+                cursor: pointer;
+                transition: all 0.6s;
+            }
+            display: grid;
+            grid-template-columns: repeat(4, 256px);
+            gap: 40px;
+            .offers__item {
+                padding: 16px 16px 40px 16px;
+                &-img {
+                    .main__image {
+                        height: 278px;
+                        width: 224px;   
+                    }
+                    .offers__item-properties {
+                        display: flex;
+                        position: absolute;
+                        margin-top: 15px;
+                        .offers__properties-circle {
+                            .visible {
+                                opacity: 0;
+                            }
+                            img {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                        .offers__properties-precent {
+                            .visible {
+                                opacity: 0;
+                            }
+                            img {
+                                width: 30px;
+                                height: 50px;
+                            }
+                        }
+                        .offers__properties-width {
+                            .visible {
+                                opacity: 0;
+                            }
+                            img {
+                                margin-left: 8px;
+                                width: 30px;
+                                height: 50px;
+                            }
+                        }
+                        .offers__properties-discount {
+                            margin-left: 40px;
+                            .discount {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 25px;
+                                border-style: none;
+                            }
+                            .disc {
+                                color: rgb(184, 76, 116);
+                                font-family: Cormorant;
+                                font-size: 20px;
+                                font-weight: 700;
+                                line-height: 24px;
+                                letter-spacing: 0%;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .offers__color {
+                        position: absolute;
+                        margin-top: 246px;  
+                        .offers__color-item {
+                            display: grid;
+                            grid-template-columns: repeat(7, 32px);
+                        }
+                    }
+                }
+                &-wrapper {
+                    width: 213px;
+                    .offers__item-descr {
+                        margin-top: 24px;
+                        color: rgb(5, 46, 76);
+                        font-family: PT Sans;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+                    .offers__item-price {
+                        margin-top: 47px;
+                        display: flex;
+                        align-items: center;
+                        .offers__item-from {
+                            color: rgb(5, 46, 76);
+                            font-family: Cormorant Infant;
+                            font-style: italic;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                        .offers__item-newprice {
+                            margin-left: 22px;
+                            color: rgb(5, 46, 76);
+                            font-family: Cormorant;
+                            font-size: 22px;
+                            font-weight: 700;
+                            line-height: 39px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                        .offers__item-oldprice {
+                            .offers__oldprice-line {
+                                position: absolute;
+                                width: 60px;
+                                height: 0;
+                                margin-top: 20px;
+                                transform: rotate(-29.22deg);
+                                border: 1px solid rgb(184, 76, 116);
+                            }
+                            margin-left: 32px;
+                            color: rgb(5, 46, 76);
+                            font-family: "Cormorant Infant", serif;
+                            font-size: 22px;
+                            font-weight: 400;
+                            line-height: 39px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                            opacity: 0.2;
+                        }
+                    }
+                    .offers__item-bid {
+                        margin-top: 16px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .offers__item-submit {
+                            .submit {
+                                width: 160px;
+                                height: 40px;
+                                background-color: rgba(0, 0, 0, 0);
+                                color: rgb(5, 46, 76);
+                                font-family: PT Sans;
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 17px;
+                                letter-spacing: 0%;
+                                text-align: center;
+                                text-transform: uppercase;
+                                border: 1.5px solid #000;
+                                cursor: pointer;
+                            }
+                        }
+                        .offers__item-shoppingcart {
+                            width: 37px;
+                            height: 31px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
